@@ -13,7 +13,7 @@ pipeline {
         }
         stage('Delivery') {
             steps {
-                sh 'docker run --name nodecicd-cont -p 8080:2000 nodecicd-img:v1.0 &'
+                sh 'docker run --name nodecicd-cont -p 2000:2000 nodecicd-img:v1.0 &'
             }
         }
     }
