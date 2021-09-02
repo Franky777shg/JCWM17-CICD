@@ -15,4 +15,8 @@ server.get('/user', (req, res) => {
     res.status(200).send('<h1>API Practice with CI/CD Route User :) </h1>')
 })
 
+server.get('/login', (req, res) => {
+    res.status(200).send('<h1>API Practice with CI/CD Login with Google :) </h1>')
+})
+
 server.listen(PORT, () => console.log(`Server is Running at PORT : ${PORT}`))
