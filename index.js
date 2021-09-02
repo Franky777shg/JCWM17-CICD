@@ -8,7 +8,7 @@ server.use(cors())
 server.use(express.json())
 
 server.get('/', (req, res) => {
-    res.status(200).send('<h1>API Practice with CI/CD :)</h1>')
+    res.status(200).send('<h1>API Practice with CI/CD Version 2:)</h1>')
 })
 
 server.listen(PORT, () => console.log(`Server is Running at PORT : ${PORT}`))
