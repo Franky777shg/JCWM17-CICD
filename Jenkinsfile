@@ -10,7 +10,7 @@ pipeline {
             steps {
                 sh 'docker build --tag nodecicd-img:v1.0 .'
             }
-        },
+        }
         stage('Delivery') {
             steps {
                 sh 'docker container rm nodecicd-cont'
