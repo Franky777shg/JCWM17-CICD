@@ -8,13 +8,13 @@ pipeline {
     stages {
         stage('Build') {
             steps {
-                sh 'docker build --tag nodecicd-img:v1.0 .'
+                sh 'sudo docker build --tag nodecicd-img:v1.0 .'
             }
         }
         stage('Delivery') {
             steps {
-                sh 'docker container rm nodecicd-cont'
-                sh 'docker run --name nodecicd-cont -p 8080:2000 nodecicd-img:v1.0 &'
+                sh 'sudo docker container rm nodecicd-cont'
+                sh 'sudo docker run --name nodecicd-cont -p 8080:2000 nodecicd-img:v1.0 &'
             }
         }
     }
